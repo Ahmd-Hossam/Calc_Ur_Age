@@ -1,0 +1,119 @@
+$main_color:red;
+/*================================= start services =======================*/
+.services{
+    overflow: hidden;
+    .body{
+        background: linear-gradient(50deg, #f459a56b, #74d9d747);
+        padding: 70px 0;
+        .top{
+            display: flex;
+            justify-content: space-around;
+            .calc{
+                h1{
+                    text-transform: capitalize;
+                    font-weight: bold;
+                }
+            }
+            .choose{
+                form{
+                   margin-top: 20px;
+                }
+            }
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            padding: 0 100px;
+            justify-content: space-between;
+            @media(max-width:1100px){
+                padding: 0 20px;
+            }
+            @media(max-width:768px){
+                    flex-wrap: wrap;
+            }
+            li{
+                margin: 40px auto;
+                position: relative;
+               
+                a{
+                    width: 150px;
+                    height: 140px;
+                    display: block;
+                    position: relative;
+                    text-align: center;
+                   
+                    @media(max-width:1100px){
+                        width: 200px;
+                        height: 180px;
+                    }
+                    @media(max-width:930px){
+                        width: 180px;
+                        height: 160px;
+                    }
+                    &:hover{
+                        &::before{
+                            border-radius:  63.5% 36.5% 32% 68%  / 60% 40% ;
+                        }
+                    }
+                    &::before{
+                        transition: all .3s ease-in-out !important;
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        z-index: 1;
+                        transition: transform 0.3s ease 0s;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 63.5% 36.5% 32% 68% / 47.5% 52.5%;
+                    }
+                    span{
+                        position: absolute;
+                        display: inline-block;
+                        width: 150px;
+                        z-index: 99;
+                        color: #f1f1f1;
+                        left:50%;
+                        top:48%;
+                        margin-left: -75px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        letter-spacing: .2em;
+                        &:first-child{
+                            top:30%;
+                        }
+                    }
+                }
+                .a_one{
+                    &::before{
+                        transform: translate(-50%, -50%) rotate(240deg);
+                        background-color: #5F6CFF;
+
+                    }
+                }
+
+                .a_two{
+                    &::before{
+                        transform: translate(-50%, -50%) rotate(280deg);
+                        background-color:#F459A5;
+                    }
+                }  
+
+                .a_three{
+                    &::before{
+                        transform: translate(-50%, -50%) rotate(240deg);
+                        background-color:#FFA53C;
+                    }
+                }
+
+                .a_four{
+                    &::before{
+                        transform: translate(-50%, -50%) rotate(280deg);
+                        background-color: #74D9D7;
+                    }
+                }
+            }
+        }  
+    }
+}
+/*================================= end  services  =======================*/
